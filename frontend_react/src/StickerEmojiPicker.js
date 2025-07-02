@@ -1,10 +1,9 @@
 import React from "react";
-import Picker from "@emoji-mart/react";
-import data from "@emoji-mart/data";
+import { Picker } from "emoji-mart";
 
 /**
  * StickerEmojiPicker
- * Emoji-mart v5 React picker for emojis/stickers (PUBLIC_INTERFACE).
+ * emoji-mart v3 Picker for emojis/stickers (PUBLIC_INTERFACE).
  */
 const StickerEmojiPicker = ({ open, setOpen, onSelect, disabled }) => {
   if (!open) return null;
@@ -17,13 +16,14 @@ const StickerEmojiPicker = ({ open, setOpen, onSelect, disabled }) => {
       }}
     >
       <Picker
-        data={data}
+        set="apple"
         theme="light"
         emojiSize={28}
-        previewPosition="none"
-        skinTonePosition="none"
-        onEmojiSelect={emoji => onSelect(emoji.native)}
+        showPreview={false}
+        showSkinTones={false}
+        onSelect={emoji => onSelect(emoji.native)}
         style={{ borderRadius: 8 }}
+        title="Pick an emoji"
       />
     </div>
   );

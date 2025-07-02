@@ -19,6 +19,11 @@ export const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process
 
 3. Meme templates are sourced from a public table called `meme_templates` in Supabase (see `MemeTemplatesSidebar.js`). Images are currently fetched via public URLs.
 
+> ⚠️ **IMPORTANT:** Due to project platform restrictions, you must manually create the required table in your Supabase project (if not already present):
+> - Table name: `meme_templates`
+> - Columns: `url` (type: text, required)
+> Create this via the Supabase web dashboard under Table Editor.
+
 4. To enable saving memes or uploading images to storage:
     - Use `supabase.storage.from('bucket_name').upload(file_path, file)` as per documentation.
 

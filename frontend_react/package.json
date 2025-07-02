@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@supabase/supabase-js": "^2.50.2",
-    "@emoji-mart/react": "^5.4.0",
+    "emoji-mart": "^3.0.1",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
     "react": "^18.2.0",
